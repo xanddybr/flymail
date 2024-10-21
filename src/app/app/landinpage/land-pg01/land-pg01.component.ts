@@ -13,15 +13,8 @@ export class LandPg01Component {
   
   meusDados:string[]=[]
   imagem:string = "assets/img/card_catarseie.jpeg"
+  video:string = "assets/video/brief_video_nany.mp4"
 
-  soma(){
-    let dados:string[]=['Maria','Jose','Paulo','Alexandre','Anastácia']
-    this.meusDados = dados
-    
-  }
-
-
- 
 
 
 }

@@ -8,25 +8,29 @@
 
 <body>
 
-<div class="d-flex align-items-center videoArea">
+<div class="col videoArea">
+    <div class="row">
 
-    <div id="son1" class="col-6">
-      <img id="son1_1" class="imgArea" [src]="imagem">
-    </div>
 
-    <div id="son2" class="d-flex flex-column">
-
+    <div id="son2" class="col-lg">
          <div *ngIf="videoState"><app-brief-video></app-brief-video></div>
          <div *ngIf="ctLeadState"><app-catch-lead></app-catch-lead></div>
           
           <div *ngIf="btSmbState" id="son2_3" class="d-flex justify-content-center" style="color: white;">
             <button (click)="changForCatchLead()" id="son2_4" type="button" class="btn btn-warning buttonArea" hidden><h2 style="color:red"><b>Saiba Mais!</b></h2></button>
           </div>
-    
     </div>
 
-</div>
- 
+    <div id="son1" class="col">
+      <img id="son1_1" class="imgArea" [src]="imagem">
+    </div>
+
+    
+
+  </div>
+
+  </div>
+  
  </body>
 </html>
 

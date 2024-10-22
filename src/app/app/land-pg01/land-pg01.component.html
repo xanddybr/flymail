@@ -16,17 +16,15 @@
 
     <div id="son2" class="d-flex flex-column">
 
-      <div id="son2_1" class="d-flex justify-content-center titleArea" style="color: white;">
+      <div id="son2_1" class="d-flex justify-content-center titleArea" [style]="{'color':'white'}">
         <h2> NÃO PERCA ESSA OPORTUNIDADE !!!</h2>
       </div>
 
       <div id="son2_2" class="d-flex justify-content-center">
-        <video id="video" class="col-10" autoplay [muted]="true" source [src]="video"></video>
+        <video id="video" class="col-10" autoplay controls source [src]="video"></video>
       </div>
-    
-      <div id="son2_3" class="d-flex justify-content-center" style="color: white;">
-        <button type="button" class="btn btn-warning buttonArea"><h2> Saiba Mais! </h2></button>
-      </div>
+
+      <div id="sbMais" hidden><app-sb-mais></app-sb-mais></div>
     
     </div>
 

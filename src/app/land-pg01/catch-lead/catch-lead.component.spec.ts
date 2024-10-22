@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandPg02Component } from './land-pg02.component';
+import { CatchLeadComponent } from './catch-lead.component';
 
-describe('LandPg02Component', () => {
-  let component: LandPg02Component;
-  let fixture: ComponentFixture<LandPg02Component>;
+describe('CatchLeadComponent', () => {
+  let component: CatchLeadComponent;
+  let fixture: ComponentFixture<CatchLeadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LandPg02Component]
+      imports: [CatchLeadComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LandPg02Component);
+    fixture = TestBed.createComponent(CatchLeadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

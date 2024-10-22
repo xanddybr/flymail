@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LandPg01Component } from "./app/land-pg01/land-pg01.component";
+import { LandPg01Component } from "./land-pg01/land-pg01.component";
 
 @Component({
   selector: 'app-root',

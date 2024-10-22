@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SbMaisComponent } from './sb-mais.component';
+import { BriefVideoComponent } from './brief-video.component';
 
-describe('SbMaisComponent', () => {
-  let component: SbMaisComponent;
-  let fixture: ComponentFixture<SbMaisComponent>;
+describe('BriefVideoComponent', () => {
+  let component: BriefVideoComponent;
+  let fixture: ComponentFixture<BriefVideoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SbMaisComponent]
+      imports: [BriefVideoComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SbMaisComponent);
+    fixture = TestBed.createComponent(BriefVideoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

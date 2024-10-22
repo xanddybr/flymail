@@ -11,20 +11,17 @@
 <div id="Main" class="d-flex align-items-center videoArea">
 
     <div id="son1" class="col-6">
-      <img class="imgArea" [src]="imagem">
+      <img id="son1_1" class="imgArea" [src]="imagem">
     </div>
 
     <div id="son2" class="d-flex flex-column">
 
-      <div id="son2_1" class="d-flex justify-content-center titleArea" [style]="{'color':'white'}">
-        <h2> NÃO PERCA ESSA OPORTUNIDADE !!!</h2>
-      </div>
-
-      <div id="son2_2" class="d-flex justify-content-center">
-        <video id="video" (click)="muda()" class="col-10" autoplay controls source [src]="video"></video>
-      </div>
-
-      <div id="sbMais"><app-sb-mais></app-sb-mais></div>
+         <div *ngIf="videoState"><app-brief-video></app-brief-video></div>
+         <div *ngIf="ctLeadState"><app-catch-lead></app-catch-lead></div>
+          
+          <div *ngIf="btSmbState" id="son2_3" class="d-flex justify-content-center" style="color: white;">
+            <button (click)="changForCatchLead()" id="son2_4" type="button" class="btn btn-warning buttonArea" hidden><h2 style="color:red"><b>Saiba Mais!</b></h2></button>
+          </div>
     
     </div>
 

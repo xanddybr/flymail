@@ -1,31 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { Component, DoCheck, OnInit } from '@angular/core';
+import { event } from 'jquery';
+import { BriefVideoComponent } from "../brief-video/brief-video.component";
+import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
 
 
 @Component({
   selector: 'app-land-pg01',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BriefVideoComponent, CatchLeadComponent],
   templateUrl: './land-pg01.component.html',
   styleUrl: './land-pg01.component.scss'
   
 })
 
-export class LandPg01Component implements OnInit {
+export class LandPg01Component {
   
-  mostrar:boolean = false
+  btSmbState:boolean = true
+  videoState:boolean = true
+  ctLeadState:boolean = false
   imagem:string = "assets/img/card_catarseie.jpeg"
-  video:string = "assets/video/brief_video_nany.mp4"
-  
-  muda(){
-      
-      
-
-  }
-
-    ngOnInit(): void {
-
-    }
     
+    changForCatchLead(){
+      this.videoState = false
+      this.btSmbState = false
+      this.ctLeadState = true
+    }
+
+   
 
 }

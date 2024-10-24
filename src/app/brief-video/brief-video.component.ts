@@ -9,17 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BriefVideoComponent implements OnInit {
 
-  
   btVideo() {
-      document.getElementById("son2_4")?.removeAttribute('hidden')
+      //document.getElementById("son2_4")?.removeAttribute('hidden')
   }
-
 
   ngOnInit(): void {
-     document.getElementById('video')?.addEventListener('ended', this.btVideo)
+     document.querySelector('video')?.play()
+     //document.getElementById('video')?.addEventListener('ended', this.btVideo)
   }
 
-  video:string = "assets/video/brief_video_nany.mp4"
+  
   
 }
 

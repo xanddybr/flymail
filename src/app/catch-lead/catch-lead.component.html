@@ -13,18 +13,14 @@
                 <div class="mb-2 col-10">
                 <select class="form-control" required>
                   <option selected value="">Informe a sua cidade</option>
-                  <option value="">Rio de Janeiro</option>
+                  <option value="" *ngFor="let estado of estados">{{ estado }}</option>
                 </select>
                 </div>
 
                 <div class="mb-2 col-10">
                   <select class="form-control" required>
                       <option selected value="">Informe como chegou até nós</option>
-                      <option value="">Instagram</option>
-                      <option value="">FaceBook</option>
-                      <option value="">YouTube</option>
-                      <option value="">Google</option>
-                      <option value="">Atravez de indicação de um amigo</option>
+                      <option value="" *ngFor="let indicado of indicacao">{{ indicado }}</option>
                   </select>
             </div>
 

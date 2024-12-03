@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, DoCheck, OnInit } from '@angular/core';
-import { event } from 'jquery';
 import { BriefVideoComponent } from "../brief-video/brief-video.component";
 import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
+
+
 
 
 @Component({
@@ -20,12 +21,14 @@ export class LandPg01Component {
   videoState:boolean = true
   ctLeadState:boolean = false
   imagem:string = "assets/img/card_catarseie.jpeg"
+  
     
-    changForCatchLead(){
-      this.videoState = false
-      this.btSmbState = false
-      this.ctLeadState = true
-    }
+  changForCatchLead(){
+    this.videoState = false
+    this.btSmbState = false
+    this.ctLeadState = true
+  }
+
 
    
 

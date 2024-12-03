@@ -1,5 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { InternalServiceService } from '../services/internal-service.service';
+import { CepServiceService } from '../services/cep-service.service';
+import { Cep } from '../models/cep';
+
 
 @Component({
   selector: 'app-catch-lead',
@@ -9,10 +13,34 @@ import { Component } from '@angular/core';
   styleUrl: './catch-lead.component.scss'
 })
 
-export class CatchLeadComponent {
+export class CatchLeadComponent implements OnInit {
 
-  indicacao:any = ["Instagram","FaceBook","YouTube","Google","Recomendação de um amigo"]
+  cep:Cep[]=[]
+  estados:string[]=[]
+  indicacao:string[]=[]
 
-  estados:any = ["Acre","Alagoas","Amapá","Amazonas","Bahia","Ceará","Espírito Santo","Goiás","Maranhão","Mato Grosso","Mato Grosso do Sul","Minas Gerais","Pará","Paraíba","Paraná","Pernambuco","Piauí","Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul","Rondônia","Santa Catarina","São Paulo","Sergipe","Tocantins"]
+  carregar (){
+    
+  }
+
+
+  constructor(private myservice: InternalServiceService){
+
+  }
+  
+  ngOnInit(){
+
+    
+  
+    this.estados = this.myservice.getEstados()
+    this.indicacao = this.myservice.getIndication()
+
+
+  }
+
+ 
+  
+  
+
 
 }

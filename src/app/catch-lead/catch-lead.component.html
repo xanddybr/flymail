@@ -1,12 +1,12 @@
 <div style="margin-top: 30px;">
       <div id="son2_1" class="d-flex justify-content-center titleArea" style="text-align: center;">
         <h2><b>PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA!</b></h2>
+        
       </div>
                     
                 <div class="row d-flex justify-content-center" style="margin-top: 50px;">
-
-                <div class="mb-2 col-5"><input type="text" class="form-control" placeholder="Seu nome" required></div>
-                <div class="mb-2 col-5"><input type="text" class="form-control" placeholder="Sobre nome" required></div>
+                <div class="mb-2 col-5"><input type="text" class="form-control" placeholder="Nome" required value=""></div>
+                <div class="mb-2 col-5"><input type="text" class="form-control" placeholder="Sobre nome" value=""></div>
 
                 <div class="mb-2 col-10"><input type="text" class="form-control" placeholder="Informe seu E-mail" required></div>
 
@@ -23,15 +23,24 @@
                       <option value="" *ngFor="let indicado of indicacao">{{ indicado }}</option>
                   </select>
             </div>
+            
 
     <div id="son2_3" class="d-flex justify-content-center" style="color: white;">
+      
+      
       <button type="button" class="btn btn-warning buttonArea" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <h2 style="color:red"> <b>Baixar apostila gratúita...</b></h2>
       </button>
 
+      
+      
+    
+
     </div>
 
+
 </div>
+
 
 
 <!-- Modal -->

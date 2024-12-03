@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { InternalServiceService } from '../services/internal-service.service';
-import { CepServiceService } from '../services/cep-service.service';
-import { Cep } from '../models/cep';
+import { Cep } from '../models/Cep';
+import { of } from 'rxjs';
+import { error } from 'jquery';
 
 
 @Component({
@@ -15,27 +16,26 @@ import { Cep } from '../models/cep';
 
 export class CatchLeadComponent implements OnInit {
 
-  cep:Cep[]=[]
+
+  constructor(private myservice: InternalServiceService){}
+
+  ncep:any
   estados:string[]=[]
   indicacao:string[]=[]
 
   carregar (){
+    this.myservice.getCep().subscribe({ 
+      next: (v) => this.ncep = v, 
+      error: (e) => console.log (e), 
+      complete: ()=> console.log('completou o percurso')})
+  }
     
-  }
-
-
-  constructor(private myservice: InternalServiceService){
-
-  }
-  
   ngOnInit(){
-
-    
-  
+ 
+    this.carregar()
     this.estados = this.myservice.getEstados()
     this.indicacao = this.myservice.getIndication()
-
-
+  
   }
 
  

@@ -1,8 +1,8 @@
 
-export class Cep {
+export interface Cep {
     
-    cep: string
-    logradouro: string
-    bairro: string
+    cep:string
+    logradouro:string
+    bairro:string
     
 }

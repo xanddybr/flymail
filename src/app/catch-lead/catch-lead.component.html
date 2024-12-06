@@ -28,12 +28,28 @@
     <div id="son2_3" class="d-flex justify-content-center" style="color: white;">
       
       
-      <button type="button" class="btn btn-warning buttonArea" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <!-- <button type="button" class="btn btn-warning buttonArea" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <h2 style="color:red"> <b>Baixar apostila gratúita...</b></h2>
-      </button>
+      </button> -->
 
-      
-      
+      <table style="width: 1000px;">
+        <thead>
+          <tr *ngFor="let c of ncep">
+            <td>{{ c.logradouro }}</td>
+            <td>{{ c.bairro }}</td>
+            <td>{{ c.cep }}</td>
+            <td>{{ c.ibge }}</td>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+      </table>
+     
     
 
     </div>

@@ -13,7 +13,7 @@ export class InternalServiceService  {
 
   }
 
-  private url ='https://viacep.com.br/ws/21730000/json/'
+  private url ='https://viacep.com.br/ws/RS/Porto%20Alegre/Domingos/json/'
 
   getCep(): Observable<Cep[]>{
     return this.http.get<Cep[]>(this.url)

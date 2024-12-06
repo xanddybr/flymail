@@ -19,7 +19,7 @@ export class CatchLeadComponent implements OnInit {
 
   constructor(private myservice: InternalServiceService){}
 
-  ncep:any
+  ncep:Cep[]=[]
   estados:string[]=[]
   indicacao:string[]=[]
 
@@ -27,7 +27,7 @@ export class CatchLeadComponent implements OnInit {
     this.myservice.getCep().subscribe({ 
       next: (v) => this.ncep = v, 
       error: (e) => console.log (e), 
-      complete: ()=> console.log('completou o percurso')})
+      complete: ()=> console.log('requisição concluida com sucesso!')})
   }
     
   ngOnInit(){

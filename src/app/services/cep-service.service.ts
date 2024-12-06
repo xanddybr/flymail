@@ -8,12 +8,16 @@ import { Cep } from '../models/Cep';
 })
 export class CepServiceService {
 
-  constructor(private http:HttpClient) {}
-  url:string ='https://viacep.com.br/ws/21730000/json/'
+  constructor(private http: HttpClient){
+
+  }
+
+  url:string ='https://viacep.com.br/ws/RS/Porto%20Alegre/Domingos/json/'
 
   getCep(): Observable<Cep[]>{
     return this.http.get<Cep[]>(this.url)
   }
+
 
 
 

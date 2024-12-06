@@ -4,6 +4,7 @@ import { InternalServiceService } from '../services/internal-service.service';
 import { Cep } from '../models/Cep';
 import { of } from 'rxjs';
 import { error } from 'jquery';
+import { CepServiceService } from '../services/cep-service.service';
 
 
 @Component({
@@ -17,17 +18,17 @@ import { error } from 'jquery';
 export class CatchLeadComponent implements OnInit {
 
 
-  constructor(private myservice: InternalServiceService){}
+  constructor(private myservice: InternalServiceService, private restCep: CepServiceService){}
 
   ncep:Cep[]=[]
   estados:string[]=[]
   indicacao:string[]=[]
 
   carregar (){
-    this.myservice.getCep().subscribe({ 
+      this.restCep.getCep().subscribe({ 
       next: (v) => this.ncep = v, 
       error: (e) => console.log (e), 
-      complete: ()=> console.log('requisição concluida com sucesso!')})
+      complete: ()=> console.log('finished request')})
   }
     
   ngOnInit(){

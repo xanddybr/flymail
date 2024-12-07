@@ -19,7 +19,7 @@ export class LandPg01Component {
   
   btSmbState:boolean = true
   videoState:boolean = true
-  ctLeadState:boolean = true
+  ctLeadState:boolean = false
   imagem:string = "assets/img/card_catarseie.jpeg"
   
     

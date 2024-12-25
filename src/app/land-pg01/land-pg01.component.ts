@@ -5,7 +5,6 @@ import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
 
 
 
-
 @Component({
   selector: 'app-land-pg01',
   standalone: true,
@@ -15,7 +14,7 @@ import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
   
 })
 
-export class LandPg01Component {
+export class LandPg01Component implements OnInit {
   
   btSmbState:boolean = true
   videoState:boolean = true
@@ -27,6 +26,13 @@ export class LandPg01Component {
     this.videoState = false
     this.btSmbState = false
     this.ctLeadState = true
+  }
+
+ 
+
+  ngOnInit(): void {
+
+
   }
 
 

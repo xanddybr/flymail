@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CheckOutMsgComponent } from './check-out-msg.component';
+import { ModalComponent } from './modal.component';
 
-describe('CheckOutMsgComponent', () => {
-  let component: CheckOutMsgComponent;
-  let fixture: ComponentFixture<CheckOutMsgComponent>;
+describe('ModalComponent', () => {
+  let component: ModalComponent;
+  let fixture: ComponentFixture<ModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CheckOutMsgComponent]
+      imports: [ModalComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CheckOutMsgComponent);
+    fixture = TestBed.createComponent(ModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

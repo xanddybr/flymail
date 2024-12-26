@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, DoCheck, OnInit } from '@angular/core';
-import { BriefVideoComponent } from "../brief-video/brief-video.component";
+import { Component,OnInit } from '@angular/core';
 import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
-
+import { BriefVideoComponent } from '../brief-video/brief-video.component';
 
 
 @Component({
   selector: 'app-land-pg01',
   standalone: true,
-  imports: [CommonModule, BriefVideoComponent, CatchLeadComponent],
+  imports: [CommonModule, CatchLeadComponent,BriefVideoComponent],
   templateUrl: './land-pg01.component.html',
   styleUrl: './land-pg01.component.scss'
   
@@ -27,7 +26,6 @@ export class LandPg01Component implements OnInit {
     this.btSmbState = false
     this.ctLeadState = true
   }
-
  
 
   ngOnInit(): void {

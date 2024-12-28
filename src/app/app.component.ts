@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LandPg01Component } from "./land-pages/land-pg01/land-pg01.component";
+import { RouterOutlet, Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [LandPg01Component, HttpClientModule],
+  imports: [HttpClientModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+
+
 })
 
 export class AppComponent implements OnInit {
@@ -19,9 +21,8 @@ export class AppComponent implements OnInit {
   }
 
     ngOnInit(): void {
-     
-      this.router.navigate(['landingpagecatarseie2025'])
-    
+
+      this.router.navigate(['landing_page_program_catarsie_serie_2025'])
     }
  
 }

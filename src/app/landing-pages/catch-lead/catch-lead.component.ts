@@ -20,13 +20,16 @@ export class CatchLeadComponent implements OnInit {
   pointE:any[]=[]
   estados:string[]=[]
   indicacao:string[]=[]
-  frmevent:FormDataEvent
+  rangeAge:string[]=[]
+  lifePosition:string[]=[]
+
+
 
   ngOnInit(){
- 
     this.estados = this.myservice.getEstados()
     this.indicacao = this.myservice.getIndication()
-  
+    this.rangeAge = this.myservice.getRangeAge()
+    this.lifePosition = this.myservice.getlifePosition()
   }
 
 }

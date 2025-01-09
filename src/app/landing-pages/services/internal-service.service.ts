@@ -16,7 +16,15 @@ export class InternalServiceService  {
   }
 
   getIndication():string[] {
-    return ['Instagram','FaceBook','YouTube','Google','Recomendação de um amigo']
+    return ['Instagram','FaceBook','YouTube','Google','Recomendação de um conhecido','Grupos de whatsapp']
+  }
+
+  getRangeAge():string[] {
+    return ['15 á 30','30 á 45', '45 á 60','60 á 75','75 á 90','acima de 90']
+  }
+
+  getlifePosition():string[]{
+    return ['Financeira','Profissional','Sentimental','Social','Mental/Pscicológica','Saúde Física']
   }
 
 

@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
 
-      this.router.navigate(['landing_page_program_catarsie_serie_2025'])
+      this.router.navigate(['landing_page_program_catarsie_2025_1_edition'])
     }
  
 }

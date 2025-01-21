@@ -21,6 +21,7 @@ export class CatchLeadComponent implements OnInit {
   indicacao:string[]=[]
   rangeAge:string[]=[]
   lifePosition:string[]=[]
+  lblbtnApostila:string
 
 
   ngOnInit(){
@@ -30,6 +31,8 @@ export class CatchLeadComponent implements OnInit {
     this.lifePosition = this.myservice.getlifePosition()
   }
 
-
+  checkOption():void{
+    this.lblbtnApostila = 'enviado'
+  }
 }
 

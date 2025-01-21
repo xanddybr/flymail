@@ -4,9 +4,13 @@
         <b>PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA GRATUITA!</b>
       </div>
 <br><br>
-      <div class="col-sm-5 " style="margin: auto;">
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Nome" required value=""></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Sobre nome" value=""></div>
+      <div class="col-11 col-md-5 col-xg-5 col-lg-5" style="margin: auto;">
+        <div class="d-flex justify-content-between">
+                    <div class="mb-2 col-6"><input type="text" class="form-control" placeholder="Nome" required value=""></div>
+                    <div class="mb-2 col-6"><input type="text" class="form-control" placeholder="Sobre nome" value=""></div>
+
+        </div>
+                
                 <div class="mb-2"><input type="text" class="form-control" placeholder="Informe seu E-mail" required></div>
 
                 <div class="mb-2">
@@ -38,12 +42,9 @@
       </div>           
       
                <div class="mb-2" style="color: white;">
-                <input type="checkbox"> Aceito receber informações e novidades do programa Catarseie em meu e-mail
+                <input type="checkbox" (change)="checkOption()"> Aceito receber informações e novidades do programa Catarseie em meu e-mail
                </div>
-                
-
-
-
+            
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

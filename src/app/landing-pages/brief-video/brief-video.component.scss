@@ -9,3 +9,27 @@
     font-size: 1rem;
 
 }
+
+@media(max-width: 400px) {
+    .fontTitulo {
+        font-size: 1rem;
+        color: #ffffff;
+        font-weight: bold;
+    }
+}
+
+
+    @media(max-width: 400px) {
+        .fontSubTitulo {
+        display: none;
+        flex: content;
+    }
+}
+
+@media(max-width: 400px) {
+    .videoSmart {
+    height: auto;
+    
+
+}
+}

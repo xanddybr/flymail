@@ -15,26 +15,29 @@ import { BriefVideoComponent } from '../brief-video/brief-video.component';
 
 export class LandPg01Component implements OnInit {
   
-  btSmbState:boolean = true
-  videoState:boolean = true
-  ctLeadState:boolean = false
+  videoState:boolean
+  ctLeadState:boolean
   imagem:string = "assets/img/card_catarseie.jpeg"
   lblbtnApostila:string
   
     
   changForCatchLead(){
     this.videoState = false
-    this.btSmbState = false
     this.ctLeadState = true
+
     if(this.lblbtnApostila === 'Quero minha apostila grátis!') {
       this.lblbtnApostila = 'Baixar minha apostila grátis'
     } else {
       this.lblbtnApostila = 'Parabens! Verifique sua caixa de E-mail..'
     }
+    
   }
  
 
   ngOnInit(): void {
+
+    this.videoState = true
+    this.ctLeadState = false
     this.lblbtnApostila = 'Quero minha apostila grátis!'
 
   }

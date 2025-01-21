@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { InternalServiceService } from '../services/internal-service.service';
 import { fromEvent } from 'rxjs';
 
@@ -14,7 +14,6 @@ import { fromEvent } from 'rxjs';
 
 export class CatchLeadComponent implements OnInit {
 
-
   constructor(private myservice: InternalServiceService){}
 
   pointE:any[]=[]
@@ -24,13 +23,13 @@ export class CatchLeadComponent implements OnInit {
   lifePosition:string[]=[]
 
 
-
   ngOnInit(){
     this.estados = this.myservice.getEstados()
     this.indicacao = this.myservice.getIndication()
     this.rangeAge = this.myservice.getRangeAge()
     this.lifePosition = this.myservice.getlifePosition()
   }
+
 
 }
 

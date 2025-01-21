@@ -1,43 +1,48 @@
-<div style="margin-top: 30px;">
-      <div id="son2_1" class="d-flex justify-content-center titleArea" style="text-align: center;">
-        <h5><b>PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA!</b></h5>  
-      </div>                 
-                <div class="row d-flex justify-content-center" style="margin-top: 50px;">
-                <div class="mb-2 col-5"><input type="text" class="form-control" placeholder="Nome" required value=""></div>
-                <div class="mb-2 col-5"><input type="text" class="form-control" placeholder="Sobre nome" value=""></div>
+    
 
-                <div class="mb-2 col-10"><input type="text" class="form-control" placeholder="Informe seu E-mail" required></div>
+      <div id="son2_1" class="fontTitulo">
+        <b>PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA GRATUITA!</b>
+      </div>
+<br><br>
+      <div class="col-sm-5 " style="margin: auto;">
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Nome" required value=""></div>
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Sobre nome" value=""></div>
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Informe seu E-mail" required></div>
 
-                <div class="mb-2 col-10">
+                <div class="mb-2">
                 <select class="form-control" required>
                   <option selected value="">Informe a sua cidade</option>
                   <option value="" *ngFor="let estado of estados">{{ estado }}</option>
                 </select>
                 </div>
-                <div class="mb-2 col-10">
+
+                <div class="mb-2">
                   <select class="form-control" required>
                       <option selected value="">Em que faixa de idade você se encontra</option>
                       <option value="" *ngFor="let age of rangeAge">{{ age }}</option>
                   </select>
                 </div>
-                <div class="mb-2 col-10">
+
+                <div class="mb-2">
                   <select class="form-control" required>
                       <option selected value="">Informe como chegou até nós</option>
                       <option value="" *ngFor="let indicado of indicacao">{{ indicado }}</option>
                   </select>
                 </div>
-                <div class="mb-2 col-10">
+
+                <div class="mb-2">
                   <select class="form-control" required>
-                      <option selected value="">Qual area da sua vida você desejaria melhorar atravez do Workshop Catarseie?</option>
+                      <option selected value="">Qual area da sua vida você mudaria nesse momento?</option>
                       <option value="" *ngFor="let position of lifePosition">{{ position }}</option>
                   </select>
-                </div>
-     <div id="son2_3" class="d-flex justify-content-center" style="color: white;">
-       <button type="button" class="btn btn-warning buttonArea" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <h2 style="color:red"> <b>Baixar apostila gratúita...</b></h2>
-      </button>
-    </div>
-</div>
+      </div>           
+      
+               <div class="mb-2" style="color: white;">
+                <input type="checkbox"> Aceito receber informações e novidades do programa Catarseie em meu e-mail
+               </div>
+                
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

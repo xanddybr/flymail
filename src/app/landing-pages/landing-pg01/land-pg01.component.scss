@@ -1,0 +1,43 @@
+
+ .imgArea {
+   background-color: #101729;
+   text-align: center;
+
+ }
+
+ img {
+    height: 100%;
+    width: 70%;
+ }
+ 
+ .videoArea {
+    background-color: black;
+
+    
+ }
+ 
+ .titleArea {
+
+    margin-top: 50px;
+    color: yellow;
+ }
+ 
+ .buttonFile {
+   font-size: 1.3rem;
+   color: red;
+   margin-top: 50px;
+   margin-bottom: 10px;
+   font-weight: bold;
+ }
+
+
+ .footArea {
+   background-color: #101729;
+   color: #808080;
+   height: 100px;
+   font-size: 0.8rem;
+   margin-top: 10px;
+ }
+ 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

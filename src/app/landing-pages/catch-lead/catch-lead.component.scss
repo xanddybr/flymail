@@ -5,6 +5,10 @@
         color: #ffffff;
         font-weight: bold;
     }
+
+    .inputCustom1 {
+        width: 172px;
+    }
 }
 
 @media(min-width: 739px) {
@@ -13,4 +17,17 @@
         color: #ffffff;
         font-weight: bold;
     }
+
+    .inputCustom1 {
+        width: 255px;
+    }
 }
+
+.buttonFile {
+    font-size: 1.3rem;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+ 

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { InternalServiceService } from '../services/internal-service.service';
 import { fromEvent } from 'rxjs';
+import { fakeAsync } from '@angular/core/testing';
 
 
 @Component({
@@ -21,7 +22,9 @@ export class CatchLeadComponent implements OnInit {
   indicacao:string[]=[]
   rangeAge:string[]=[]
   lifePosition:string[]=[]
-  lblbtnApostila:string
+  btnDownload:boolean
+  catchLeadPanel:boolean
+  textMain:string
 
 
   ngOnInit(){
@@ -29,10 +32,18 @@ export class CatchLeadComponent implements OnInit {
     this.indicacao = this.myservice.getIndication()
     this.rangeAge = this.myservice.getRangeAge()
     this.lifePosition = this.myservice.getlifePosition()
+    this.catchLeadPanel = true
+    this.btnDownload = true
+    this.textMain = "PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA GRATUITA!"
+    
   }
 
   checkOption():void{
-    this.lblbtnApostila = 'enviado'
+    this.btnDownload == true ? this.btnDownload = false : this.btnDownload = true
+  }
+
+  sendCatchLead(){
+    this.catchLeadPanel = false
+     this.textMain = "Parabéns! Você receberá a apostila em seu email, e informaçẽos sobre o treinamento Catarse!"
   }
 }
-

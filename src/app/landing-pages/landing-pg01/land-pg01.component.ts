@@ -20,22 +20,15 @@ export class LandPg01Component implements OnInit {
   videoState:boolean
   ctLeadState:boolean
   imagem:string = "assets/img/card_catarseie.jpeg"
-  lblbtnApostila:string
+  lblbtnApostila:string = 'Quero minha apostila grátis!'
   parentData:string
-  
+  btnWantFile:boolean
+
   
   changForCatchLead(){
     this.videoState = false
     this.ctLeadState = true
-
-    if(this.lblbtnApostila === 'Quero minha apostila grátis!') {
-      this.lblbtnApostila = 'Baixar minha apostila grátis'
-    } else {
-      this.ctLeadState = false
-      this.lblbtnApostila = 'Apostila Enviada..!'
-    }
-    
-    
+    this.btnWantFile = true
   }
  
 
@@ -44,4 +37,6 @@ export class LandPg01Component implements OnInit {
     this.ctLeadState = false
     this.lblbtnApostila = 'Quero minha apostila grátis!'
   }
+
+
 }

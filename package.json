@@ -1,6 +1,7 @@
 {
   "name": "fly-pigeon",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Sistem developed for catch lead of client and stored in data base, for devlivery notification messages",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

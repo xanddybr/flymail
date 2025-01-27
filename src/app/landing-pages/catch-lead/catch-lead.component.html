@@ -7,7 +7,7 @@
    <br>
       <div class="col-11 col-md-5 col-xg-5 col-lg-5" style="margin: auto;">
         <div class="d-flex justify-content-between">
-                <div class="mb-2 col-6"><input type="text" class="form-control inputCustom1" placeholder="Nome"></div>
+                <div class="mb-2 col-6"><input type="text" class="form-control" placeholder="Nome"></div>
                 <div class="mb-2 col-6"><input type="text" class="form-control" placeholder="Sobre nome"></div>
         </div>
                <div class="mb-2"><input type="text" class="form-control" placeholder="Informe seu E-mail"></div>
@@ -43,9 +43,25 @@
                 <input type="checkbox" (change)="checkOption()"> Aceito receber informações e novidades sobre o treinamento Catarseie em meu e-mail
                </div>
             </div>  
-            <button (click)="sendCatchLead()" id="son2_4" class="btn btn-warning buttonFile" [disabled]="btnDownload">
+            <button id="son2_4" class="btn btn-warning buttonFile" data-bs-toggle="modal" data-bs-target="#exampleModal" [disabled]="btnDownload" >
               Baixar minha apostila grátis!</button><br><br>
-</div>    
+          </div>      
 <!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modalArea">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Catarse</h5>
+      </div>
+      <div class="modal-body">
+        Parabéns, sua apostila acaba de ser enviada com sucesso para o email informado!
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="sendLead()">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 

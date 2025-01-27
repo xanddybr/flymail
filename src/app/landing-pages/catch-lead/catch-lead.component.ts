@@ -3,6 +3,7 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { InternalServiceService } from '../services/internal-service.service';
 import { fromEvent } from 'rxjs';
 import { fakeAsync } from '@angular/core/testing';
+import { event } from 'jquery';
 
 
 @Component({
@@ -16,6 +17,8 @@ import { fakeAsync } from '@angular/core/testing';
 export class CatchLeadComponent implements OnInit {
 
   constructor(private myservice: InternalServiceService){}
+
+  
 
   pointE:any[]=[]
   estados:string[]=[]
@@ -35,15 +38,23 @@ export class CatchLeadComponent implements OnInit {
     this.catchLeadPanel = true
     this.btnDownload = true
     this.textMain = "PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA GRATUITA!"
-    
   }
+  
 
   checkOption():void{
     this.btnDownload == true ? this.btnDownload = false : this.btnDownload = true
   }
 
-  sendCatchLead(){
-    this.catchLeadPanel = false
-     this.textMain = "Parabéns! Você receberá a apostila em seu email, e informaçẽos sobre o treinamento Catarse!"
+  keyevent(){
+    document.addEventListener('keypress',function(event) {
+      console.log(`key pressed, ${event.key}`)
+      console.log(`key code, ${event.code}`)
+    })
   }
+
+  sendLead(){
+    location.reload()
+  }
+  
+  
 }

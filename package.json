@@ -2,7 +2,7 @@
   "name": "fly-pigeon",
   "version": "1.0.0",
   "branch": "main",
-  "description": "Sistem developed for catch lead of client and stored in data base, for devlivery notification messages",
+  "description": "System developed by catch survay and notifications by mail, for devlivery notification messages",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { LandPg01Component } from './landing-pages/landing-pg01/land-pg01.component';
 
 
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,8 +13,6 @@ import { LandPg01Component } from './landing-pages/landing-pg01/land-pg01.compon
 })
 
 export class AppComponent implements OnInit {
-
-  vai:string = 'Foi'
 
   constructor(){
 

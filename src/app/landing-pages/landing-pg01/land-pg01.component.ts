@@ -3,7 +3,6 @@ import { Component,Input,OnInit } from '@angular/core';
 import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
 import { BriefVideoComponent } from '../brief-video/brief-video.component';
 
-
 @Component({
   selector: 'app-land-pg01',
   standalone: true,
@@ -24,19 +23,15 @@ export class LandPg01Component implements OnInit {
   parentData:string
   btnWantFile:boolean
 
-  
   changForCatchLead(){
     this.videoState = false
     this.ctLeadState = true
     this.btnWantFile = true
   }
  
-
   ngOnInit(): void {
     this.videoState = true
     this.ctLeadState = false
     this.lblbtnApostila = 'Quero minha apostila grátis!'
   }
-
-
 }

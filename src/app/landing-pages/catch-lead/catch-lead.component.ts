@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { InternalServiceService } from '../services/internal-service.service';
-import { fromEvent } from 'rxjs';
-import { fakeAsync } from '@angular/core/testing';
-import { event } from 'jquery';
+
 
 
 @Component({

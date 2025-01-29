@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component,Input,OnInit } from '@angular/core';
-import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
+import { CatchLeadComponent } from '../catch-lead/catch-lead.component';
 import { BriefVideoComponent } from '../brief-video/brief-video.component';
 import { InternalServiceService } from '../services/internal-service.service';
 

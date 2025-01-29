@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { InternalServiceService } from '../services/internal-service.service';
 
 
 
@@ -14,13 +13,12 @@ import { InternalServiceService } from '../services/internal-service.service';
 
 export class CatchLeadComponent implements OnInit {
 
-  constructor(private myservice: InternalServiceService){}
+  constructor(){}
 
   
-
-  pointE:any[]=[]
-  estados:string[]=[]
-  indicacao:string[]=[]
+  @Input() fillFormService:any
+  states:string[]=[]
+  indication:string[]=[]
   rangeAge:string[]=[]
   lifePosition:string[]=[]
   btnDownload:boolean
@@ -29,10 +27,11 @@ export class CatchLeadComponent implements OnInit {
 
 
   ngOnInit(){
-    this.estados = this.myservice.getEstados()
-    this.indicacao = this.myservice.getIndication()
-    this.rangeAge = this.myservice.getRangeAge()
-    this.lifePosition = this.myservice.getlifePosition()
+
+    this.states = this.fillFormService.fillFormCatchLeads.state
+    this.indication = this.fillFormService.fillFormCatchLeads.indication
+    this.rangeAge = this.fillFormService.fillFormCatchLeads.rangeage
+    this.lifePosition = this.fillFormService.fillFormCatchLeads.lifeposition
     this.catchLeadPanel = true
     this.btnDownload = true
     this.textMain = "PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA GRATUITA!"

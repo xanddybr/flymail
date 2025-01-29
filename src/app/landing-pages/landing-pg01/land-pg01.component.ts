@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component,Input,OnInit } from '@angular/core';
 import { CatchLeadComponent } from "../catch-lead/catch-lead.component";
 import { BriefVideoComponent } from '../brief-video/brief-video.component';
+import { InternalServiceService } from '../services/internal-service.service';
 
 @Component({
   selector: 'app-land-pg01',
@@ -14,8 +15,9 @@ import { BriefVideoComponent } from '../brief-video/brief-video.component';
 
 export class LandPg01Component implements OnInit {
 
-  constructor(){}
+  constructor(private service:InternalServiceService){}
   
+  fillFormService = this.service
   videoState:boolean
   ctLeadState:boolean
   imagem:string = "assets/img/card_catarseie.jpeg"

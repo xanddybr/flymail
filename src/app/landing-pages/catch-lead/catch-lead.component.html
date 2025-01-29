@@ -13,11 +13,11 @@
                <div class="mb-2"><input type="text" class="form-control" placeholder="Informe seu E-mail"></div>
                 <div class="mb-2">
                 <select class="form-control">
-                  <option selected value="">Informe a sua cidade</option>
-                  <option value="" *ngFor="let estado of estados">{{ estado }}</option>
+                  <option selected value="">Informe o seu estado</option>
+                  <option value="" *ngFor="let state of states">{{ state }}</option>
                 </select>
                 </div>
-
+                
                 <div class="mb-2">
                   <select class="form-control">
                       <option selected value="">Em que faixa de idade você se encontra</option>
@@ -28,7 +28,7 @@
                 <div class="mb-2">
                   <select class="form-control">
                       <option selected value="">Informe como chegou até nós</option>
-                      <option value="" *ngFor="let indicado of indicacao">{{ indicado }}</option>
+                      <option value="" *ngFor="let indicate of indication">{{ indicate }}</option>
                   </select>
                 </div>
 
@@ -45,7 +45,8 @@
             </div>  
             <button id="son2_4" class="btn btn-warning buttonFile" data-bs-toggle="modal" data-bs-target="#exampleModal" [disabled]="btnDownload" >
               Baixar minha apostila grátis!</button><br><br>
-          </div>      
+          </div>
+        
 <!-- Modal -->
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

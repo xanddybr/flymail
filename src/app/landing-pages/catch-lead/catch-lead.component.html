@@ -5,12 +5,13 @@
       </div>
  <div *ngIf="catchLeadPanel">     
    <br>
-      <div class="col-11 col-md-3 col-xg-3 col-lg-3" style="margin: auto;">
-        <div class="d-flex justify-content-between">
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Nome"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Sobre nome"></div>
+      <div class="col-11 col-md-5 col-lg-5 col-xl-3" style="margin: auto;">
+        <div class="d-flex justify-content-between ">
+                <div class="mb-2 col-6"><input type="text" class="form-control d-flex" placeholder="Nome"></div>
+                <div class="mb-2 col-6"><input type="text" class="form-control d-flex" placeholder="Ultimo nome"></div>
         </div>
-               <div class="mb-2"><input type="text" class="form-control" placeholder="Informe seu E-mail"></div>
+              <div class="mb-2"><input type="text" class="form-control" placeholder="Informe seu E-mail"></div>
+               <div class="mb-2"><input type="text" class="form-control" placeholder="Celular"></div>
                 <div class="mb-2">
                 <select class="form-control">
                   <option selected value="">Informe o seu estado</option>
@@ -40,7 +41,7 @@
               </div>           
       
                <div class="mb-2" style="color: white;">
-                <input type="checkbox" (change)="checkOption()"> Aceito receber informações e novidades sobre o treinamento Catarseie em meu e-mail
+                <input type="checkbox" (change)="checkOption()"> Autorizo receber informações sobre o treinamento Catarseie meu e-mail ou smartphone
                </div>
             </div>  
             <button id="son2_4" class="btn btn-warning buttonFile" data-bs-toggle="modal" data-bs-target="#exampleModal" [disabled]="btnDownload" >

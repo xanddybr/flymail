@@ -25,7 +25,6 @@ export class CatchLeadComponent implements OnInit {
   catchLeadPanel:boolean
   textMain:string
 
-
   ngOnInit(){
 
     this.states = this.fillFormService.fillFormCatchLeads.state
@@ -35,9 +34,10 @@ export class CatchLeadComponent implements OnInit {
     this.catchLeadPanel = true
     this.btnDownload = true
     this.textMain = "PREENCHA OS CAMPOS PARA OBTER SUA APOSTILA GRATUITA!"
+
+
   }
   
-
   checkOption():void{
     this.btnDownload == true ? this.btnDownload = false : this.btnDownload = true
   }
@@ -53,5 +53,6 @@ export class CatchLeadComponent implements OnInit {
     location.reload()
   }
   
-  
+ 
+
 }

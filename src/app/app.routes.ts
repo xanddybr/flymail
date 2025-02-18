@@ -7,6 +7,5 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
     {path:"", component:LandPg01Component},
-    {path:"login", component:LoginComponent},
     {path:"dashboard", component:DashboardComponent},
 ];

@@ -1,56 +1,9 @@
 {
-  "person_leads": [
+  "numberLastPoll" :
     {
-      "id_per": "1",
-      "name": "Alexandre",
-      "last_n": "Souza",
-      "email":"xanddybr@gmail.com",
-      "state": "Rio de janeiro",
-      "rangeage": "30 á 45",
-      "idication": "Facebook",
-      "lifeposition":"Financeira",
-      "agree_news" : true,
-      "data_register": "29/01/2025 01:33",
-      "campaign":"nanny-story"
-      }
-    ],
-    "users": [
-      {
-      "id_user":"1",
-      "name": "admin",
-      "user_name": "alessouza@live.com",
-      "password": "942737ae82b6274dddfcd74cb6aaf5db",
-      "status": true,
-      "role":"admin",
-      "data_reg": "29/01/2025"
-      }
-    ],  
-      "activity_reg" : [
-      {
-      "id_act" : "1",
-      "id_user":"",
-      "id_msg": "",
-      "criterio": "all",
-      "status_msg":"",
-      "date_send": ""
-      }
-    ],
-      "settings_of_system": [
-      {
-      "send_msg_aut": true,
-      "send_predated":"",
-      "id_msg":"",
-      "criteria" :"",
-      "criteria_value":""
-      }
-    ],
-    "stored_msg": [
-      { 
-      "id_msg" : "1",
-      "msg_name": "",
-      "msg_content": "",
-      "msg_type": "",
-      "attachment_path":""
-      }
-  ]
+     "idPoll": 36
+    }
+
 }
+
+   

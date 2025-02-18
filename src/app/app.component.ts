@@ -1,7 +1,7 @@
-import { routes } from './app.routes';
 import { Component, Input, OnInit } from '@angular/core';
 import { LandPg01Component } from './landing-pages/landing-pg01/land-pg01.component';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { ExpressServicesService } from './services/express-services.service';
 
 
 @Component({
@@ -16,12 +16,11 @@ import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/rou
 
 export class AppComponent implements OnInit {
 
-  constructor(private router:Router){
+  constructor(private router:Router, express:ExpressServicesService) {
 
   }
-
     ngOnInit(): void {
-      
+   
     }
  
 }

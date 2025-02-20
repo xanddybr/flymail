@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `typePerson` (
     `typePerson` varchar(100) DEFAULT NULL,
     `create_at` varchar(30) DEFAULT NULL,
     PRIMARY KEY (`idType`)
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci
+);
 
 CREATE TABLE IF NOT EXISTS `person` (
     `idPerson` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `person` (
     PRIMARY KEY (`idPerson`),
     KEY `idType_fgk` (`idType`),
     CONSTRAINT `idType_fgk` FOREIGN KEY (`idType`) REFERENCES `typePerson` (`idType`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci
+);
 
 CREATE TABLE IF NOT EXISTS `poll` (
     `idPerson` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `poll` (
     PRIMARY KEY (`idPoll`),
     KEY `idPerson_fgk` (`idPerson`),
     CONSTRAINT `idPerson_fgk` FOREIGN KEY (`idPerson`) REFERENCES `person` (`idPerson`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci
+);
 
 CREATE TABLE IF NOT EXISTS `mailsModel` (
     `idMail` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `mailsModel` (
     `path_attachment` varchar(100) DEFAULT NULL,
     `create_at` varchar(30) DEFAULT NULL,
     PRIMARY KEY (`idMail`)
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci
+);
 
 CREATE TABLE IF NOT EXISTS `sendedMails` (
     `idSend` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
@@ -49,10 +49,10 @@ CREATE TABLE IF NOT EXISTS `sendedMails` (
     `statusMail` tinyint(1) DEFAULT NULL,
     `create_at` varchar(30) DEFAULT NULL,
     `statusSmtp` varchar(10) DEFAULT NULL,
-    `sendOfId` varchar(100) DEFAULT NULL,
+    `sendOfId` varchar(100) DEFAULT NUL L,
     PRIMARY KEY (`idSend`),
     KEY `idMail_fgk` (`idMail`),
     KEY `idPerson2_fgk` (`idPerson`),
     CONSTRAINT `idMail_fgk` FOREIGN KEY (`idMail`) REFERENCES `mailsModel` (`idMail`),
     CONSTRAINT `idPerson2_fgk` FOREIGN KEY (`idPerson`) REFERENCES `person` (`idPerson`)
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci
+);
